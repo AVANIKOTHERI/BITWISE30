@@ -5,8 +5,8 @@ int main() {
     unsigned char b = 0xCD;  // 1100 1101
     unsigned char result;
 
-    // Performing bitwise operations
-    result = (a & 0xF0) | (b & 0x0F); // Extract upper 4 bits of A and lower 4 bits of B
+    // Alternative bitwise method
+    result = ((a & 0x0F) << 4) | ((b & 0xF0) >> 4);
 
     // Print the result
     printf("Result: 0x%X\n", result); // Expected output: 0xBC
